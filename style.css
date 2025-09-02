@@ -7,7 +7,7 @@
             --border-color: #ddd;
             --font-stack-montserrat: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
             --font-stack-open-sans: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-            --profile-bg-image: url('/profilphoto.jpg');
+            --profile-bg-image: url('/sa-profile.jpg');
         }
 
         /* Basic Reset & Body Styles */
