@@ -1,0 +1,335 @@
+       :root {
+            --primary-color: #3498db; /* A professional blue */
+            --secondary-color: #2c3e50; /* Darker blue/grey for text */
+            --text-color: #333;
+            --light-grey: #f4f4f4;
+            --white: #ffffff;
+            --border-color: #ddd;
+            --font-stack-montserrat: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            --font-stack-open-sans: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            --profile-bg-image: url('https://i.ibb.co/TDm2t6ps/profilphoto.jpg');
+        }
+
+        /* Basic Reset & Body Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-stack-open-sans);
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-stack-montserrat);
+            color: var(--secondary-color);
+            margin-bottom: 0.8em;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #2980b9; /* Slightly darker primary on hover */
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        /* Hero Section */
+        #hero {
+            /* Overlay directly in background using linear-gradient */
+            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), var(--profile-bg-image) no-repeat center center/cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--secondary-color);
+            position: relative;
+        }
+
+        /* Removed ::before pseudo-element for overlay, integrated into background property */
+
+        #hero .container {
+            position: relative;
+            z-index: 1;
+            padding-top: 60px; /* Space for potential fixed nav */
+        }
+
+        #hero .profile-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--primary-color);
+            margin-bottom: 25px;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        #hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        #hero p.lead {
+            font-size: 1.6em;
+            color: var(--text-color);
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            font-weight: 400;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        /* Section Headings */
+        .section-heading {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5em;
+            color: var(--secondary-color);
+        }
+
+        /* About Section */
+        #about {
+            background-color: var(--light-grey);
+            text-align: center;
+        }
+
+        .website-links {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .website-links li a {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .website-links li a:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+
+
+        /* Social Links */
+        #social {
+            text-align: center;
+        }
+
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap; /* Allows icons to wrap on small screens */
+        }
+
+        .social-icons li a {
+            font-size: 2.5em;
+            color: var(--secondary-color);
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+
+        .social-icons li a:hover {
+            color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: var(--light-grey);
+            text-align: center;
+        }
+
+        .contact-info p {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 1em;
+            font-family: var(--font-stack-open-sans); /* Ensure font is consistent */
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form input[type="text"]:focus,
+        .contact-form input[type="email"]:focus,
+        .contact-form textarea:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-form button {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            cursor: pointer; /* Added for better UX */
+        }
+
+        /* Blog/Updates Section */
+        #blog {
+            text-align: center;
+        }
+
+        #blog .placeholder-text {
+            font-style: italic;
+            color: #666;
+            margin-top: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9em;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #hero h1 {
+                font-size: 2.5em;
+            }
+
+            #hero p.lead {
+                font-size: 1.2em;
+            }
+
+            .section-heading {
+                font-size: 2em;
+            }
+
+            .social-icons {
+                gap: 20px;
+            }
+
+            .social-icons li a {
+                font-size: 2em;
+            }
+
+            .contact-form {
+                padding: 20px;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #hero h1 {
+                font-size: 2em;
+            }
+
+            #hero p.lead {
+                font-size: 1em;
+            }
+
+            .profile-photo {
+                width: 150px;
+                height: 150px;
+            }
+
+            .section-heading {
+                font-size: 1.8em;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+        }
